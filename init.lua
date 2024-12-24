@@ -476,6 +476,7 @@ require('lazy').setup({
           client.server_capabilities.documentFormattingProvider = false
           client.server_capabilities.documentRangeFormattingProvider = false
         end,
+        root_dir = require('lspconfig.util').root_pattern '.git',
         settings = {
           jsx_close_tag = {
             enable = true,
@@ -1018,6 +1019,12 @@ require('lazy').setup({
       task = '📌',
       lazy = '💤 ',
     },
+  },
+  checker = {
+    enabled = true,
+  },
+  install = {
+    colorscheme = { 'catppuccin' },
   },
 })
 
